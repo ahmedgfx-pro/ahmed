@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Ahmed</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmed Portfolio</title>
+
+<style>
+:root{
+  --bg:#02040a;
+  --bg2:#050914;
+  --card:rgba(10,15,30,0.75);
+  --text:#e6edf3;
+  --muted:#9aa4b2;
+  --accent:#22d3ee;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
+body{
+  background:radial-gradient(1200px 600px at 50% -10%, #0a1328 0%, #02040a 60%), linear-gradient(#02040a,#02040a);
+  color:var(--text);
+}
+
+/* NAV */
+nav{position:fixed;top:18px;width:100%;display:flex;justify-content:center;z-index:1000;}
+nav ul{display:flex;gap:28px;list-style:none;padding:12px 34px;border-radius:40px;background:rgba(255,255,255,0.04);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,0.06);} 
+nav li{cursor:pointer;transition:.25s;color:var(--muted);} 
+nav li:hover{
+  color: var(--text);
+  opacity: 1;
+} 
+
+/* HERO */
+.hero{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:0 20px;}
+.hero h1{font-size:84px;letter-spacing:3px;}
+.hero h2{font-size:42px;margin-top:10px;background:linear-gradient(90deg,var(--accent),#67e8f9);-webkit-background-clip:text;color:transparent;}
+.hero p{margin-top:18px;max-width:760px;color:var(--muted);} 
+
+/* SECTION */
+section{padding:120px 10%;}
+.title{text-align:center;font-size:44px;margin-bottom:60px;}
+.sub{max-width:800px;margin:0 auto 40px;text-align:center;color:var(--muted);} 
+
+/* BOX */
+.box{background:var(--card);border:1px solid rgba(255,255,255,0.06);border-radius:22px;padding:30px;backdrop-filter:blur(16px);transition:.35s;}
+.box:hover{
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border-color: rgba(255,255,255,0.12);
+  transform: translateY(-6px);
+} 
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:26px;}
+
+/* SERVICES */
+.service{padding:18px 20px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);transition:.25s;}
+.service:hover{
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+} 
+.service h4{margin-bottom:6px;} 
+.service p{font-size:14px;color:var(--muted);} 
+
+/* SKILLS */
+.skill{margin-bottom:22px;}
+.bar{height:8px;background:#121826;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.05);} 
+.fill{height:100%;background:linear-gradient(90deg,var(--accent),#67e8f9);} 
+.row{display:flex;justify-content:space-between;margin-bottom:6px;color:#cbd5e1;font-size:14px;}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;text-align:center;} 
+.stat h3{font-size:44px;color:var(--accent);} 
+.stat p{color:var(--muted);} 
+
+/* TIMELINE */
+.timeline{display:grid;gap:16px;}
+.t-item{padding:18px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);} 
+.t-item h4{margin-bottom:6px;} 
+.t-item span{color:var(--muted);font-size:13px;} 
+
+/* CTA */
+.cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn{padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);cursor:pointer;transition:.25s;}
+.btn:hover{
+  background: rgba(255,255,255,0.06);
+  transform: translateY(-2px);
+} 
+
+/* CONTACT */
+.contact{display:grid;gap:12px;text-align:center;color:#cbd5e1;} 
+
+footer{text-align:center;padding:40px;color:#94a3b8;}
+</style>
+</head>
+
+<body>
+
+<nav>
+<ul>
+<li onclick="go('home')">Home</li>
+<li onclick="go('about')">About</li>
+<li onclick="go('services')">Services</li>
+<li onclick="go('skills')">Skills</li>
+<li onclick="go('projects')">Projects</li>
+<li onclick="go('experience')">Experience</li>
+<li onclick="go('contact')">Contact</li>
+</ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<h1>Ahmed</h1>
+<h2>Web Developer • UI/UX • Graphic Designer</h2>
+<p>I build cinematic, high-performance digital products—clean UI, smooth interactions, and strong visual identity that helps brands grow.</p>
+<div class="cta" style="margin-top:28px;">
+  <div class="btn" onclick="go('projects')">View Projects</div>
+  <div class="btn" onclick="go('contact')">Hire Me</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2 class="title">About Me</h2>
+<p class="sub">Focused on modern UI/UX, responsive web development, and eye-catching design. I combine creativity with clean code to deliver fast, scalable, and beautiful products.</p>
+<div class="grid">
+  <div class="box">
+    <h3>What I Do</h3>
+    <p class="sub">Design systems, landing pages, portfolio sites, dashboards, branding, thumbnails, and engaging video edits.</p>
+  </div>
+  <div class="box">
+    <h3>Specialties</h3>
+    <p class="sub">Smooth layouts, hover interactions, performance optimization, modern trends, and user-focused experiences.</p>
+  </div>
+</div>
+</section>
+
+<!-- STATS -->
+<section>
+<h2 class="title">Achievements</h2>
+<div class="stats">
+  <div class="box stat"><h3>15+</h3><p>Projects Built</p></div>
+  <div class="box stat"><h3>5+</h3><p>Core Skills</p></div>
+  <div class="box stat"><h3>85%</h3><p>Academic Score</p></div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2 class="title">My Services</h2>
+<div class="grid">
+  <div class="box service"><h4>UI & UX Design</h4><p>Wireframes, prototypes, mobile & web UI, user flows, clean and modern layouts.</p></div>
+  <div class="box service"><h4>Web Development</h4><p>Responsive sites, landing pages, animations, performance-focused builds.</p></div>
+  <div class="box service"><h4>Graphic Designing</h4><p>Logos, branding, thumbnails, posters, social media creatives.</p></div>
+  <div class="box service"><h4>Video Editing</h4><p>Reels, shorts, transitions, music sync, engaging storytelling.</p></div>
+  <div class="box service"><h4>Script Writing</h4><p>Hooks, storytelling structures, viral content formats.</p></div>
+  <div class="box service"><h4>Content Strategy</h4><p>Idea generation, planning, growth tactics for social media.</p></div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="title">Skills</h2>
+<div class="box">
+  <div class="skill">
+    <div class="row"><span>UI/UX Design</span><span>90%</span></div>
+    <div class="bar"><div class="fill" style="width:90%"></div></div>
+  </div>
+  <div class="skill">
+    <div class="row"><span>Web Development</span><span>95%</span></div>
+    <div class="bar"><div class="fill" style="width:95%"></div></div>
+  </div>
+  <div class="skill">
+    <div class="row"><span>Graphic Design</span><span>85%</span></div>
+    <div class="bar"><div class="fill" style="width:85%"></div></div>
+  </div>
+  <div class="skill">
+    <div class="row"><span>Video Editing</span><span>80%</span></div>
+    <div class="bar"><div class="fill" style="width:80%"></div></div>
+  </div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="title">Projects</h2>
+<p class="sub">Selected work showcasing design quality, clean code, and modern UI.</p>
+<div class="grid">
+  <div class="box"><h3>Portfolio Website</h3><p class="sub">Personal brand site with animations and responsive layout.</p></div>
+  <div class="box"><h3>Landing Page</h3><p class="sub">Conversion-focused page with hero, features, and CTA.</p></div>
+  <div class="box"><h3>Dashboard UI</h3><p class="sub">Clean admin UI with cards, charts placeholders, and grids.</p></div>
+  <div class="box"><h3>Social Media Kit</h3><p class="sub">Thumbnails, banners, and post templates.</p></div>
+</div>
+</section>
+
+<!-- EXPERIENCE / STUDY -->
+<section id="experience">
+<h2 class="title">Experience & Study</h2>
+<div class="grid">
+  <div class="box">
+    <h3>Education</h3>
+    <div class="timeline">
+      <div class="t-item"><h4>APSACS — Class 9</h4><span>85% • Computer Science Focus</span></div>
+      <div class="t-item"><h4>Self Learning</h4><span>HTML, CSS, JavaScript, UI/UX, Design</span></div>
+    </div>
+  </div>
+  <div class="box">
+    <h3>Freelance</h3>
+    <div class="timeline">
+      <div class="t-item"><h4>Portfolio & Landing Pages</h4><span>Responsive, fast, modern UI</span></div>
+      <div class="t-item"><h4>Design & Editing</h4><span>Branding, thumbnails, video edits</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- GOALS -->
+<section>
+<h2 class="title">My Goals</h2>
+<div class="grid">
+  <div class="box"><h3>Short-Term</h3><p class="sub">Build high-quality portfolio, sharpen UI/UX, take freelance projects.</p></div>
+  <div class="box"><h3>Long-Term</h3><p class="sub">Start a digital agency, build products, become an industry expert.</p></div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2 class="title">Contact</h2>
+<div class="box contact">
+  <div>Email: ahmedgfx@gmail.com</div>
+  <div>Available for freelance & collaborations</div>
+</div>
+</section>
+
+<footer>© 2026 Ahmed Portfolio</footer>
+
+<script>
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'});} 
+</script>
+
+</body>
+</html>
+
+    <script src="/script.js"></script>
+  </body>
+
+</html>
